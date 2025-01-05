@@ -30,7 +30,7 @@ public class PianoPlayer: ObservableObject {
             try audioEngine.start()
             
             // Attempt to load "example.sf2" from the app or package bundle
-            if let soundFontURL = Bundle.main.url(forResource: "example", withExtension: "sf2") {
+            if let soundFontURL = Bundle.module.url(forResource: "example", withExtension: "sf2") {
                 try loadPianoSoundFont(from: soundFontURL)
             } else {
                 print("SoundFont file not found")
